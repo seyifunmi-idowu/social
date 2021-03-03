@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log In or Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/login.css') }}">
+
+
+	<style>
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box1">
+			<h1><br>Sign In</h1>
+		</div>
+			<form action="http://127.0.0.1:5000/processlogin" method="POST">
+				<div>
+					<label></label>
+					<input class="name" type="text" name="username" placeholder="Username" required>
+				</div>
+				<br>
+				<div>
+					<label></label>
+					<input class="password" type="Password" name="pwd" placeholder="Password"
+						   title= "Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
+				</div>
+				<br>
+		    		<input class="signin" type="submit" name="Sign In" value="Sign In">
+			</form>
+			<br>
+				<a href="">Forgot Username/Password</a>
+			<div style="margin-top:90px"> </div>
+			<p>Don't have an account?</p>
+			<p><a href="http://127.0.0.1:5000/signup/">Sign Up</a></p>
+	</div>
+</body>
+</html>

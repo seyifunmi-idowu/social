@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/signup.css') }}">
+</head>
+<body>
+	<div class="container">
+		<div class= "box1">
+			<h1><br> Sign Up</h1>
+			<h4>It's quick and easy</h4>
+		</div>
+		<form action="http://127.0.0.1:5000/signup/" method="POST">
+    			<div>
+    				<br>
+    				<input class="firstname" type="text" name="firstName" placeholder="First name" required>
+    			</div>
+				<br>
+				<div>
+					<input class="lastname" type="text" name="lastName" placeholder="Last name" required>
+	    		</div>
+	    		<br>
+				<div>
+					<input class="username" type="text" name="username" placeholder="Username" required>
+	    		</div>
+	    		<br>
+	    		<div>
+	    			<input class="email" type="email" name="LastName" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+	    		</div>
+	    		<br>
+	    		<div>
+	    			<input class="password" type="Password" name="Password" placeholder="New Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title= "Must have atleast 8 characters including one  number, one uppercase and onelowercase letter" required>
+	    		</div>
+	    		<br>
+	    		<div>
+	    			<input class="cpassword" type="Password" name="Password" placeholder="Confirm Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title= "Must match previous password" required>
+	    		</div>
+	    		<br>
+	    		<div>
+	    			<label>Gender</label>
+	    			<select name="gender" required>
+	    				<option value="male">Male</option>
+	    				<option value="female">Female</option>
+	    			</select> 
+	    		</div>
+	    		<br>
+	    		<div>
+	    			<label>Date of Birth:</label>
+	    			<input class="date" type="date" name="birthday" required>
+	    		</div>
+	    		<br>
+	    		<input class="signup" type="submit" name="submit" value="Sign Up">
+    		</form>
+    </div>
+</body>
+</html>
